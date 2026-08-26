@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const auth = require("../middleware/authmiddleware");
+const auth = require("../middleware/authMiddleware");
 const { initializePayment, verifyPayment } = require("../controllers/paymentController");
 
 router.post("/initialize/:bookingId", auth, initializePayment);
