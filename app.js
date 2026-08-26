@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 const app = express();
 connectDB();
 
-const frontendOrigin = new URL(process.env.FRONTEND_URL).origin();
+const frontendOrigin = new URL(process.env.FRONTEND_URL).origin;
 
 app.use(cors({
   origin: frontendOrigin,
